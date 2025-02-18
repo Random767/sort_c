@@ -5,7 +5,7 @@ int main(void) {
     int numberlist[4], iterationscount = 0;
     int numberlist_n = sizeof(numberlist) /sizeof(numberlist[0]);
     for(int i = 0; i < numberlist_n; i++) {
-        printf("Digite o %d° número: ", i+i);
+        printf("Digite o %d° número: ", i+1);
         scanf("%d", &numberlist[i]);
     }
 
