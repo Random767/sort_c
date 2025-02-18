@@ -35,10 +35,12 @@ int main(void) {
         }
     }
 
+
+    printf("Lista dos números ordenados, do maior para o menor\n")
     for(int i = 0; i < numberlist_n; i++) {
-        printf("%d\n", numberlist[i]);
+        printf("%d ", numberlist[i]);
     }
-    printf("Número de iteracoes: %d", iterationscount);
+    printf("\nNúmero de iteracoes: %d\n", iterationscount);
 
     return 0;
 }
