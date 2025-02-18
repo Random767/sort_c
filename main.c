@@ -29,7 +29,7 @@ int main(void) {
     }
 
 
-    printf("Lista dos números ordenados, do maior para o menor\n")
+    printf("Lista dos números ordenados, do maior para o menor\n");
     for(int i = 0; i < numberlist_n; i++) {
         printf("%d ", numberlist[i]);
     }
