@@ -14,8 +14,7 @@ int main(void) {
             if(j < i) {
               j = i;
               continue;
-            }
-            if(numberlist[i] == numberlist[j]) {
+            } else if(numberlist[i] == numberlist[j]) {
                 continue;
             }  else if(numberlist[i] > numberlist[j]) {
                 continue;
