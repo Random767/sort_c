@@ -2,24 +2,26 @@
 
 int main(void) {
 
-    int numberlist[4], iterationscount = 0;
+    int numberlist[6], iterationscount = 0;
     int numberlist_n = sizeof(numberlist) /sizeof(numberlist[0]);
     for(int i = 0; i < numberlist_n; i++) {
         printf("Digite o %d° número: ", i+1);
         scanf("%d", &numberlist[i]);
     }
 
-    for(int i = 0; i < numberlist_n; i++) {
-        for(int j = 0; j <numberlist_n; j++) {
-            if(j < i) {
-              j = i;
+    for(int position_1 = 0; position_1 < numberlist_n; position_1++) {
+        for(int position_2 = 0; position_2 <numberlist_n; position_2++) {
+            if(position_2 < position_1) {
+              position_2 = position_1;
               continue;
-            } else if(numberlist[i] < numberlist[j]) {
-                iterationscount++;
-                int temp1 = numberlist[i];
-                numberlist[i] = numberlist[j];
-                numberlist[j] = temp1;
+            } else if(numberlist[position_1] < numberlist[position_2] || numberlist[position_1] == numberlist[position_2]) {
+                break;
             }
+
+            iterationscount++;
+            int temp1 = numberlist[position_1];
+            numberlist[position_1] = numberlist[position_2];
+            numberlist[position_2] = temp1;
         }
     }
 
