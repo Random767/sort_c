@@ -14,10 +14,6 @@ int main(void) {
             if(j < i) {
               j = i;
               continue;
-            } else if(numberlist[i] == numberlist[j]) {
-                continue;
-            }  else if(numberlist[i] > numberlist[j]) {
-                continue;
             } else if(numberlist[i] < numberlist[j]) {
                 iterationscount++;
                 int temp1 = numberlist[i];
