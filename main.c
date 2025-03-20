@@ -21,7 +21,7 @@ int main(void) {
                 continue;
             } else if(numberlist[i] < numberlist[j]) {
                 iterationscount++;
-                int temp1 = numberlist[i], temp2 = numberlist[j];
+                int temp1 = numberlist[i];
                 numberlist[i] = numberlist[j];
                 numberlist[j] = temp1;
             }
