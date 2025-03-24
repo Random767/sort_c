@@ -10,18 +10,17 @@ int main(void) {
     }
 
     for(int position_1 = 0; position_1 < numberlist_n; position_1++) {
-        for(int position_2 = 0; position_2 <numberlist_n; position_2++) {
-            if(position_2 < position_1) {
-              position_2 = position_1;
-              continue;
-            } else if(numberlist[position_1] < numberlist[position_2] || numberlist[position_1] == numberlist[position_2]) {
-                break;
-            }
+        int maior_index = position_1;
 
-            iterationscount++;
-            int temp1 = numberlist[position_1];
-            numberlist[position_1] = numberlist[position_2];
-            numberlist[position_2] = temp1;
+        for(int position_2 = position_1 + 1; position_2 < numberlist_n; position_2++) {
+            if(numberlist[position_2] > numberlist[maior_index]) {
+                maior_index = position_2;
+            }
+        }
+        if(maior_index != position_1) {
+            int temp = numberlist[position_1];
+            numberlist[position_1] = numberlist[maior_index];
+            numberlist[maior_index] = temp;
         }
     }
 
