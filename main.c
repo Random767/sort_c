@@ -9,8 +9,13 @@ int main(void) {
         scanf("%d", &numberlist[i]);
     }
 
+    int position_2 = 0;
+
     for(int position_1 = 0; position_1 < numberlist_n; position_1++) {
-        for(int position_2 = 0; position_2 <numberlist_n; position_2++) {
+        iterationscount = 0;
+        int maior_index = position_1;
+        
+        for(position_2 = 0; position_2 <numberlist_n; position_2++) {
             if(position_2 < position_1) {
               position_2 = position_1;
               continue;
@@ -18,11 +23,18 @@ int main(void) {
                 break;
             }
 
+            maior_index = position_2;
+
             iterationscount++;
-            int temp1 = numberlist[position_1];
-            numberlist[position_1] = numberlist[position_2];
-            numberlist[position_2] = temp1;
         }
+
+        if(iterationscount > 0) {
+            int temp = numberlist[maior_index];
+            numberlist[maior_index] = numberlist[position_1];
+            numberlist[position_1] = numberlist[maior_index];
+
+        }
+
     }
 
 
