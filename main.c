@@ -19,7 +19,7 @@ int main(void) {
             if(position_2 < position_1) {
               position_2 = position_1;
               continue;
-            } else if(numberlist[position_1] < numberlist[position_2] || numberlist[position_1] == numberlist[position_2]) {
+            } else if(numberlist[position_2] < numberlist[maior_index] || numberlist[position_2] == numberlist[maior_index]) {
                 break;
             }
 
