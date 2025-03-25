@@ -30,5 +30,7 @@ int main(void) {
         printf("%d ", numberlist[i]);
     }
 
+    printf("\n");
+
     return 0;
 }
