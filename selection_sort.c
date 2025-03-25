@@ -2,7 +2,7 @@
 
 int main(void) {
 
-    int numberlist[6], iterationscount = 0;
+    int numberlist[6];
     int numberlist_n = sizeof(numberlist) /sizeof(numberlist[0]);
     for(int i = 0; i < numberlist_n; i++) {
         printf("Digite o %d° número: ", i+1);
@@ -29,7 +29,6 @@ int main(void) {
     for(int i = 0; i < numberlist_n; i++) {
         printf("%d ", numberlist[i]);
     }
-    printf("\nNúmero de iteracoes: %d\n", iterationscount);
 
     return 0;
 }
