@@ -8,11 +8,11 @@ int main() {
     }
 
     for(int index = 0; index < numberlist_n - 1; index++) {
-        for(int position_2 = 0; position_2 < numberlist_n - 1 - index; position_2++) {
-            if(numberlist[position_2] > numberlist[position_2 + 1]){
-                int temp = numberlist[position_2];
-                numberlist[position_2] = numberlist[position_2 + 1];
-                numberlist[position_2 + 1] = temp;
+        for(int position = 0; position < numberlist_n - 1 - index; position++) {
+            if(numberlist[position] > numberlist[position + 1]){
+                int temp = numberlist[position];
+                numberlist[position] = numberlist[position + 1];
+                numberlist[position + 1] = temp;
             }
         }
     }
