@@ -7,8 +7,8 @@ int main() {
         scanf("%d", &numberlist[i]);
     }
 
-    for(int position_1 = 0; position_1 < numberlist_n - 1; position_1++) {
-        for(int position_2 = 0; position_2 < numberlist_n - 1 - position_1; position_2++) {
+    for(int index = 0; index < numberlist_n - 1; index++) {
+        for(int position_2 = 0; position_2 < numberlist_n - 1 - index; position_2++) {
             if(numberlist[position_2] > numberlist[position_2 + 1]){
                 int temp = numberlist[position_2];
                 numberlist[position_2] = numberlist[position_2 + 1];
